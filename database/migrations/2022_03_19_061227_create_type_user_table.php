@@ -15,9 +15,9 @@ class CreateTypeUserTable extends Migration
     {
         Schema::create('type_user', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->softDeletes();
+            $table->string('name')->unique();
             $table->timestamps(); //deleted at
+            $table->softDeletes();
         });
     }
 

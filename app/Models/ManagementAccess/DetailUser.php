@@ -34,4 +34,10 @@ class DetailUser extends Model
         'deleted_at',
     ];
 
+
+    public function type_user()
+    { 
+        return $this->belongsTo('App\Models\MasterData\TypeUser', 'type_user_id', 'id');
+    }
+
 }

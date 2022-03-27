@@ -1,8 +1,15 @@
 <?php
 
-namespace App\Http\Requests\ConfigPayment;
+namespace App\Http\Requests\User;
 
+use App\Models\MasterData\ConfigPayment;
+
+//use gate
 use Illuminate\Foundation\Http\FormRequest;
+use Symfony\Component\HttpFoundation\Response;
+
+//untuk update tambahkan rule
+use Illuminate\Validation\Rule;
 
 class UpdateConfigPaymentRequest extends FormRequest
 {
@@ -13,7 +20,7 @@ class UpdateConfigPaymentRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,8 +30,15 @@ class UpdateConfigPaymentRequest extends FormRequest
      */
     public function rules()
     {
+
         return [
-            //
+            'fee' => [
+                'required', 'string', 'max:255', 
+            ],
+            'vat' => [
+                'required', 'string', 'max:255', 
+            ],
         ];
+
     }
 }

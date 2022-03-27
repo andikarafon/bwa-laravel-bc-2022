@@ -1,8 +1,15 @@
 <?php
 
-namespace App\Http\Requests\Specialist;
+namespace App\Http\Requests\User;
 
+use App\Models\MasterData\Specialist;
+
+//use gate
 use Illuminate\Foundation\Http\FormRequest;
+use Symfony\Component\HttpFoundation\Response;
+
+//untuk update tambahkan rule
+use Illuminate\Validation\Rule;
 
 class UpdateSpecialistRequest extends FormRequest
 {
@@ -13,7 +20,7 @@ class UpdateSpecialistRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +31,12 @@ class UpdateSpecialistRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => [
+                'required', 'string', 'max:255', 
+            ],
+            'price' => [
+                'required', 'string', 'max:255', 
+            ],
         ];
     }
 }

@@ -1,8 +1,12 @@
 <?php
 
-namespace App\Http\Requests\Specialist;
+namespace App\Http\Requests\User;
 
+use App\Models\MasterData\Specialist;
+
+//use gate
 use Illuminate\Foundation\Http\FormRequest;
+use Symfony\Component\HttpFoundation\Response;
 
 class StoreSpecialistRequest extends FormRequest
 {
@@ -24,7 +28,12 @@ class StoreSpecialistRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => [
+                'required', 'string', 'max:255', 
+            ],
+            'price' => [
+                'required', 'string', 'max:255', 
+            ],
         ];
     }
 }

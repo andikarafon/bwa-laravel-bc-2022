@@ -1,8 +1,15 @@
 <?php
 
-namespace App\Http\Requests\Role;
+namespace App\Http\Requests\User;
 
+use App\Models\ManagementAccess\Role;
+
+//use gate
 use Illuminate\Foundation\Http\FormRequest;
+use Symfony\Component\HttpFoundation\Response;
+
+//untuk update tambahkan rule
+use Illuminate\Validation\Rule;
 
 class UpdateRoleRequest extends FormRequest
 {
@@ -13,7 +20,7 @@ class UpdateRoleRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,8 +30,12 @@ class UpdateRoleRequest extends FormRequest
      */
     public function rules()
     {
+
         return [
-            //
+            'title' => [
+                'required', 'string', 'max:255', 
+            ],
         ];
+
     }
 }

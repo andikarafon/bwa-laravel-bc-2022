@@ -9,7 +9,8 @@ use Illuminate\Foundation\Http\FormRequest;
 use Symfony\Component\HttpFoundation\Response;
 
 
-
+//untuk update tambahkan rule
+use Illuminate\Validation\Rule;
 
 class UpdateUserReqeust extends FormRequest
 {
@@ -20,7 +21,9 @@ class UpdateUserReqeust extends FormRequest
      */
     public function authorize()
     {
+        //create middleware from kernel at here
         return true;
+        
     }
 
     /**

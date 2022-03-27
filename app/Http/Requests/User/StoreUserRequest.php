@@ -4,7 +4,7 @@ namespace App\Http\Requests\User;
 
 use App\Models\User;
 
-
+//use gate
 use Illuminate\Foundation\Http\FormRequest;
 use Symfony\Component\HttpFoundation\Response;
 

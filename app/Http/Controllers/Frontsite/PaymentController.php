@@ -18,6 +18,7 @@ use App\Models\Operational\Doctor;
 use App\Models\MasterData\Consultation;
 use App\Models\MasterData\ConfigPayment;
 use App\Models\Operational\Appointment;
+use App\Models\MasterData\Specialist;
 use App\Models\Operational\Transaction;
 
 class PaymentController extends Controller

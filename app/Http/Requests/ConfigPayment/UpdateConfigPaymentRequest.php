@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\User;
+namespace App\Http\Requests\ConfigPayment;
 
 use App\Models\MasterData\ConfigPayment;
 
@@ -8,8 +8,7 @@ use App\Models\MasterData\ConfigPayment;
 use Illuminate\Foundation\Http\FormRequest;
 use Symfony\Component\HttpFoundation\Response;
 
-//untuk update tambahkan rule
-use Illuminate\Validation\Rule;
+
 
 class UpdateConfigPaymentRequest extends FormRequest
 {

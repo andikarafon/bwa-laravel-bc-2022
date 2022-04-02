@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\User;
+namespace App\Http\Requests\Specialist;
 
 use App\Models\MasterData\Specialist;
 
@@ -29,7 +29,7 @@ class StoreSpecialistRequest extends FormRequest
     {
         return [
             'name' => [
-                'required', 'string', 'max:255', 
+                'required', 'string', 'max:255', 'unique:specialist',
             ],
             'price' => [
                 'required', 'string', 'max:255', 

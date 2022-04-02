@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Http\Requests\User;
+namespace App\Http\Requests\Doctor;
 
 use App\Models\Operational\Doctor;
 
@@ -9,8 +9,7 @@ use App\Models\Operational\Doctor;
 use Illuminate\Foundation\Http\FormRequest;
 use Symfony\Component\HttpFoundation\Response;
 
-//untuk update tambahkan rule
-use Illuminate\Validation\Rule;
+
 
 
 class UpdateDoctorRequest extends FormRequest

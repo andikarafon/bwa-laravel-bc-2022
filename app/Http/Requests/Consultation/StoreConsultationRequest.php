@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\User;
+namespace App\Http\Requests\Consultation;
 
 use App\Models\MasterData\Consultation;
 
@@ -30,7 +30,7 @@ class StoreConsultationRequest extends FormRequest
     
         return [
             'name' => [
-                'required', 'string', 'max:255', 
+                'required', 'string', 'max:255', 'unique:consultation',
             ],
         ];
 

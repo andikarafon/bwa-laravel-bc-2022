@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\User;
+namespace App\Http\Requests\Role;
 
 use App\Models\ManagementAccess\Role;
 
@@ -33,7 +33,7 @@ class UpdateRoleRequest extends FormRequest
 
         return [
             'title' => [
-                'required', 'string', 'max:255', 
+                'required', 'string', 'max:255', Rule::unique('role')->ignore($this->role),
             ],
         ];
 

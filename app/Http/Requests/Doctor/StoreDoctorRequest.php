@@ -41,5 +41,6 @@ class StoreDoctorRequest extends FormRequest
                 'nullable', 'string', 'max:10000', 
             ],
         ];
+        
     }
 }

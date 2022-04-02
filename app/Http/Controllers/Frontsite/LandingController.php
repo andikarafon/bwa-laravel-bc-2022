@@ -10,7 +10,8 @@ use Symfony\Component\HttpFoundation\Response;
 
 //user everything here
 //use case
-use Auth;
+//Jika tidak perlu Login, maka tidak perlu di use dan dideklarasi di Construct
+// use Auth;
 
 //model here
 use App\Models\User;
@@ -24,16 +25,16 @@ use App\Models\MasterData\Specialist;
 class LandingController extends Controller
 {
     //construct adalah yang dijalankan pertama sekali
-     public function __construct()
-     {
-        //hanya yang Login yang bisa akses
-         $this->middleware('auth');
-     }
+    //  public function __construct()
+    //  {
+    //     //hanya yang Login yang bisa akses
+    //      $this->middleware('auth');
+    //  }
 
 
     public function index()
     {
-        return view('pages.frontsite.appointment.index');
+        return view('pages.frontsite.landing-page.index');
     }
 
     /**

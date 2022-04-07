@@ -17,6 +17,8 @@
                 @yield('content')
             @include('components.frontsite.footer')
 
+
+            {{-- stack adalah untuk meng-import script yang hanya jalan di pages tertentu saja --}}
             @stack('before-script')
                 @include('includes.frontsite.script')
             @stack('after-script')

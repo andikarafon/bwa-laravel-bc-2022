@@ -201,7 +201,7 @@
 
 @endsection
 
-
+{{-- after style artinya setelah style utama jalan, maka dijalankan style yang di-push --}}
 @push('after-style')
     <link rel="stylesheet" href="{{ url('https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css') }}"/>
 @endpush

@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.auth')
 
-<head>
+@section('title', 'Login')
 
-    @include('includes.frontsite.meta')
-
-    <title>Login | MeetDoctor</title>
-
-    @stack('before-style')
-    @include('includes.frontsite.style')
-    @stack('after-style')
-
-</head>
+@section('content')
 
 <body>
     <div class="min-h-screen">
@@ -110,4 +101,4 @@
     </div>
 </body>
 
-</html>
+@endsection

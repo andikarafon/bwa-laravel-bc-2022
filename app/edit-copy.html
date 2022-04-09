@@ -6,21 +6,22 @@
 
                 <!-- Logo Brand -->
                 <a href="{{ route('index') }}" class="flex-shrink-0 flex items-center">
-                    <img class="h-12 lg:h-16 w-auto" src="{{ asset('/assets/frontsite/images/logo.png') }}" alt="Meet Doctor Logo" />
+                    <img class="h-12 lg:h-16 w-auto" src="{{ asset('/assets/frontsite/images/logo.png') }}"
+                        alt="Meet Doctor Logo" />
                 </a>
 
                 <!-- Navigation Menu -->
                 <div class="hidden lg:ml-6 lg:flex lg:space-x-12">
 
                     <!-- Active Link: 
-                            "text-[#1E2B4F] after:absolute after:content-[''] after:border-b-2 
-                            after:border-[#0D63F5] after:w-8/12 after:-translate-x-1/2 
-                            after:bottom-3 after:left-1/2 font-semibold", 
-                            
-                            Default Link: 
-                            "text-[#1E2B4F] hover:text-gray-500 inline-flex 
-                            items-center px-1 pt-1 text-lg font-medium"
-                    -->
+                "text-[#1E2B4F] after:absolute after:content-[''] after:border-b-2 
+                after:border-[#0D63F5] after:w-8/12 after:-translate-x-1/2 
+                after:bottom-3 after:left-1/2 font-semibold", 
+                
+                Default Link: 
+                "text-[#1E2B4F] hover:text-gray-500 inline-flex 
+                items-center px-1 pt-1 text-lg font-medium"
+           -->
                     <a href="{{ route('index') }}"
                         class="text-[#1E2B4F] relative after:absolute after:content-[''] after:border-b-2 after:border-[#0D63F5] after:w-8/12 after:-translate-x-1/2 after:bottom-3 after:left-1/2 font-semibold inline-flex items-center px-1 text-lg">
                         Home
@@ -57,7 +58,7 @@
                                 </div>
                             </div>
                             <img class="h-12 w-12 rounded-full ring-1 ring-offset-4 ring-[#0D63F3]"
-                                src="{{ asset('/assets/frontsite/images/authenticated-user.svg') }}" alt="User Profile" />
+                                src="/src/assets/images/authenticated-user.svg" alt="User Profile" />
                         </button>
                     </div>
                     <div x-show="profileDekstopOpen" @click.outside="profileDekstopOpen = false"
@@ -71,7 +72,7 @@
                             tabindex="-1" id="user-menu-item-0">Your Profile</a>
                         <a href="#" class="block px-4 py-2 text-sm text-[#1E2B4F] hover:bg-gray-100" role="menuitem"
                             tabindex="-1" id="user-menu-item-1">Settings</a>
-                        <a href="{{ route('index') }}" class="block px-4 py-2 text-sm text-[#1E2B4F] hover:bg-gray-100"
+                        <a href="../../index.html" class="block px-4 py-2 text-sm text-[#1E2B4F] hover:bg-gray-100"
                             role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
                     </div>
                 </div>

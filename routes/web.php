@@ -37,6 +37,8 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
 
 Route::group(['prefix' => 'backsite', 'as' => 'backsite.', 'middleware' => ['auth:sanctum', 'verified']], function () {
 
+
+
     //dashboard
     Route::resource('dashboard', DashboardController::class);
 

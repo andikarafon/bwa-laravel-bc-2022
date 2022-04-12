@@ -11,6 +11,9 @@ use App\Http\Controllers\Frontsite\SuccessRegisterController;
 //backsite
 use App\Http\Controllers\Backsite\DashboardController;
 use App\Http\Controllers\Backsite\PermissionController;
+use App\Http\Controllers\Backsite\RoleController;
+use App\Http\Controllers\Backsite\UserController;
+use App\Http\Controllers\Backsite\UserTypeController;
 
 
 /*
@@ -45,6 +48,15 @@ Route::group(['prefix' => 'backsite', 'as' => 'backsite.', 'middleware' => ['aut
 
     //permission
     Route::resource('permission', PermissionController::class);
+
+    //role
+    Route::resource('role', RoleController::class);
+
+    //role
+    Route::resource('user', UserController::class);
+
+    //usertype
+    Route::resource('usertype', UserTypeController::class);
 
     //success pages
     Route::resource('successregister', SuccessRegisterController::class);

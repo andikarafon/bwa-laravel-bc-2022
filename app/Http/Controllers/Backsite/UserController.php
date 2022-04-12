@@ -5,6 +5,15 @@ namespace App\Http\Controllers\Backsite;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+//use library
+use Illuminate\Support\Facades\storage;
+use Symfony\Component\HttpFoundation\Response;
+
+//autentikasi
+use Auth;
+
+use App\Models\User;
+
 class UserController extends Controller
 {
     /**
@@ -12,9 +21,16 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     public function index()
     {
-        //
+        return view('pages.backsite.management-access.user.index');
     }
 
     /**
@@ -24,7 +40,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -35,7 +51,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -46,7 +62,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -57,7 +73,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -69,7 +85,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -80,6 +96,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return abort(404);
     }
 }

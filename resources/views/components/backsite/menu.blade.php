@@ -15,15 +15,15 @@
 
             <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title" data-i18n="Templates">Templates</span></a>
                 <ul class="menu-content">
-                    <li><a class="menu-item" href="#"><i></i><span data-i18n="Vertical">Menu Vertical</span></a>
+                    <li><a class="menu-item" href="#"><i></i><span data-i18n="Vertical">Menu Test Page Index</span></a>
                         <ul class="menu-content">
                             <li><a class="menu-item" href="{{ route('backsite.permission.index') }}"><i></i><span data-i18n="Classic Menu">Backsite-permission</span></a>
                             </li>
-                            <li><a class="menu-item" href="../vertical-modern-menu-template"><i></i><span data-i18n="Modern Menu">Modern Menu</span></a>
+                            <li><a class="menu-item" href="{{ route('backsite.role.index') }}"><i></i><span data-i18n="Modern Menu">Backsite-Role</span></a>
                             </li>
-                            <li><a class="menu-item" href="../vertical-collapsed-menu-template"><i></i><span data-i18n="Collapsed Menu">Collapsed Menu</span></a>
+                            <li><a class="menu-item" href="{{ route('backsite.user.index') }}"><i></i><span data-i18n="Collapsed Menu">Backsite-User</span></a>
                             </li>
-                            <li><a class="menu-item" href="../vertical-compact-menu-template"><i></i><span data-i18n="Compact Menu">Compact Menu</span></a>
+                            <li><a class="menu-item" href="{{ route('backsite.usertype.index') }}"><i></i><span data-i18n="Compact Menu">Backsite-UserType</span></a>
                             </li>
                             <li><a class="menu-item" href="../vertical-content-menu-template"><i></i><span data-i18n="Content Menu">Content Menu</span></a>
                             </li>

@@ -81,6 +81,7 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
 
+                            <a class="dropdown-item" href="{{ route('index') }}"><i class="ft-user"></i> Home</a>
                             <a class="dropdown-item" href="user-profile.html"><i class="ft-user"></i> Edit Profile</a>
                             
                             <div class="dropdown-divider"></div>

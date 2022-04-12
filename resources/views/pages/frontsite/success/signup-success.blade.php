@@ -22,7 +22,8 @@
           dalam berkonsultasi
         </p>
         <a
-          href="{{ route('backsite.dashboard.index') }}"
+          {{-- href="{{ route('backsite.dashboard.index') }}" --}} {{-- if you want redirect to backsite.dashboard.index --}}
+          href="{{ route('index') }}"
           class="inline-block mt-10 bg-[#0D63F3] text-white rounded-full px-14 py-3"
         >
           Home

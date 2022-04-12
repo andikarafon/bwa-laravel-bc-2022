@@ -22,6 +22,9 @@ class SuccessRegisterController extends Controller
     public function index()
     {
         return view('pages.frontsite.success.signup-success');
+        //only for testing success payment after slicing
+        //return view('pages.frontsite.success.payment-success');
+
     }
 
     /**

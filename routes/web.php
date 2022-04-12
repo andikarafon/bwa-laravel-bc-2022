@@ -10,6 +10,7 @@ use App\Http\Controllers\Frontsite\SuccessRegisterController;
 
 //backsite
 use App\Http\Controllers\Backsite\DashboardController;
+use App\Http\Controllers\Backsite\PermissionController;
 
 
 /*
@@ -41,6 +42,9 @@ Route::group(['prefix' => 'backsite', 'as' => 'backsite.', 'middleware' => ['aut
    
     //dashboard
     Route::resource('dashboard', DashboardController::class);
+
+    //permission
+    Route::resource('permission', PermissionController::class);
 
     //success pages
     Route::resource('successregister', SuccessRegisterController::class);

@@ -17,7 +17,7 @@
                 <ul class="menu-content">
                     <li><a class="menu-item" href="#"><i></i><span data-i18n="Vertical">Menu Vertical</span></a>
                         <ul class="menu-content">
-                            <li><a class="menu-item" href="../vertical-menu-template"><i></i><span data-i18n="Classic Menu">Classic Menu</span></a>
+                            <li><a class="menu-item" href="{{ route('backsite.permission.index') }}"><i></i><span data-i18n="Classic Menu">Backsite-permission</span></a>
                             </li>
                             <li><a class="menu-item" href="../vertical-modern-menu-template"><i></i><span data-i18n="Modern Menu">Modern Menu</span></a>
                             </li>

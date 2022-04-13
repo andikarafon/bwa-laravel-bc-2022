@@ -25,7 +25,19 @@
                             </li>
                             <li><a class="menu-item" href="{{ route('backsite.usertype.index') }}"><i></i><span data-i18n="Compact Menu">Backsite-UserType</span></a>
                             </li>
-                            <li><a class="menu-item" href="../vertical-content-menu-template"><i></i><span data-i18n="Content Menu">Content Menu</span></a>
+                            <li><a class="menu-item" href="{{ route('backsite.consultation.index') }}"><i></i><span data-i18n="Content Menu">Backsite-Consultation</span></a>
+                            </li>
+                            <li><a class="menu-item" href="{{ route('backsite.specialist.index') }}"><i></i><span data-i18n="Content Menu">Backsite-Specialist</span></a>
+                            </li>
+                            <li><a class="menu-item" href="{{ route('backsite.config-payment.index') }}"><i></i><span data-i18n="Content Menu">Backsite-Config-Payment</span></a>
+                            </li>
+                            <li><a class="menu-item" href="{{ route('backsite.doctor.index') }}"><i></i><span data-i18n="Content Menu">Backsite-Doctor</span></a>
+                            </li>
+                            <li><a class="menu-item" href="{{ route('backsite.appointment-backsite.index') }}"><i></i><span data-i18n="Content Menu">Backsite-Appointment</span></a>
+                            </li>
+                            <li><a class="menu-item" href="{{ route('backsite.transaction.index') }}"><i></i><span data-i18n="Content Menu">Backsite-Transaction</span></a>
+                            </li>
+                            <li><a class="menu-item" href="{{ route('backsite.report.index') }}"><i></i><span data-i18n="Content Menu">Backsite-Report</span></a>
                             </li>
                             <li><a class="menu-item" href="../vertical-overlay-menu-template"><i></i><span data-i18n="Overlay Menu">Overlay Menu</span></a>
                             </li>

@@ -1,0 +1,1 @@
+pages\backsite\master-data\consultation\index.blade.php

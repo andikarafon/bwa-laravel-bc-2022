@@ -14,6 +14,13 @@ use App\Http\Controllers\Backsite\PermissionController;
 use App\Http\Controllers\Backsite\RoleController;
 use App\Http\Controllers\Backsite\UserController;
 use App\Http\Controllers\Backsite\UserTypeController;
+use App\Http\Controllers\Backsite\ConsultationController;
+use App\Http\Controllers\Backsite\SpecialistController;
+use App\Http\Controllers\Backsite\ConfigPaymentController;
+use App\Http\Controllers\Backsite\DoctorController;
+use App\Http\Controllers\Backsite\AppointmentBacksiteController;
+use App\Http\Controllers\Backsite\TransactionController;
+use App\Http\Controllers\Backsite\ReportController;
 
 
 /*
@@ -57,6 +64,27 @@ Route::group(['prefix' => 'backsite', 'as' => 'backsite.', 'middleware' => ['aut
 
     //usertype
     Route::resource('usertype', UserTypeController::class);
+
+    //consultation
+    Route::resource('consultation', ConsultationController::class);
+
+    //specialist
+    Route::resource('specialist', SpecialistController::class);
+
+    //config-payment
+    Route::resource('config-payment', ConfigPaymentController::class);
+
+    //doctor
+    Route::resource('doctor', DoctorController::class);
+
+    //appointment-backsite-controller
+    Route::resource('appointment-backsite', AppointmentBacksiteController::class);
+
+    //transaction
+    Route::resource('transaction', TransactionController::class);
+
+    //report
+    Route::resource('report', ReportController::class);
 
     //success pages
     Route::resource('successregister', SuccessRegisterController::class);

@@ -14,7 +14,7 @@ use Auth;
 
 use App\Models\User;
 
-class DoctorController extends Controller
+class ReportController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -30,7 +30,7 @@ class DoctorController extends Controller
 
     public function index()
     {
-        return view('pages.backsite.operational.doctor.index');
+        return view('pages.backsite.operational.report.index');
     }
 
     /**

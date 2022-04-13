@@ -1,0 +1,1 @@
+resources\views\pages\backsite\operational\transaction\index.blade.php

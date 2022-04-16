@@ -60,6 +60,9 @@ class SpecialistController extends Controller
 
         //store to database
         $specialist = Specialist::create($data);
+
+        alert()->success('Success Message', 'Successfully created data');
+        return redirect()->route('backsite.specialist.index');
     }
 
 
@@ -82,9 +85,9 @@ class SpecialistController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Specialist $specialist)
     {
-        return abort(404);
+        return view('pages.backsite.master-data.specialist.show', compact('specialist'));
     }
 
     /**
@@ -93,9 +96,9 @@ class SpecialistController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Specialist $specialist)
     {
-        return abort(404);
+        return view('pages.backsite.master-data.specialist.edit', compact('specialist'));
     }
 
     /**
@@ -105,9 +108,13 @@ class SpecialistController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateSpecialistRequest $request, Specialist $specialist)
     {
-        return abort(404);
+       $data = $request($data);
+       $specialist->update($data);
+
+       alert()->success('Success Message', 'Successfully Updated data');
+       return redirect()->route('backsite.specialist.index');
     }
 
     /**
@@ -116,8 +123,14 @@ class SpecialistController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Specialist $specialist)
     {
-        return abort(404);
+       
+      
+       $specialist->forceDelete(); 
+
+       alert()->success('Success Message', 'Successfully deleted data');
+       return back();
     }
+
 }

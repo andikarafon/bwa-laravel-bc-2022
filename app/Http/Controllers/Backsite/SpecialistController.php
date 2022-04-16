@@ -9,10 +9,15 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\storage;
 use Symfony\Component\HttpFoundation\Response;
 
+// request
+use App\Http\Requests\Specialist\StoreSpecialistRequest;
+use App\Http\Requests\Specialist\UpdateSpecialistRequest;
+
 //autentikasi
 use Auth;
 
-use App\Models\User;
+//use model
+use App\Models\MasterData\Specialist;
 
 class SpecialistController extends Controller
 {
@@ -30,7 +35,9 @@ class SpecialistController extends Controller
 
     public function index()
     {
-        return view('pages.backsite.master-data.specialist.index');
+        $specialist = Specialist::orderBy('created_at', 'DESC')->get();
+        
+        return view('pages.backsite.master-data.specialist.index', compact('specialist'));
     }
 
     /**
@@ -43,16 +50,31 @@ class SpecialistController extends Controller
         return abort(404);
     }
 
+
+
+    //request
+    public function store(StoreSpecialistRequest $request)
+    {
+        //get all request from frontsite
+        $data = $request->all();
+
+        //store to database
+        $specialist = Specialist::create($data);
+    }
+
+
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    /*
     public function store(Request $request)
     {
         return abort(404);
     }
+    */
 
     /**
      * Display the specified resource.

@@ -12,7 +12,9 @@ use Symfony\Component\HttpFoundation\Response;
 //autentikasi
 use Auth;
 
-use App\Models\User;
+//use model
+use App\Models\MasterData\TypeUser;
+
 
 
 class UserTypeController extends Controller
@@ -31,7 +33,12 @@ class UserTypeController extends Controller
 
     public function index()
     {
-        return view('pages.backsite.management-access.type-user.index');
+        $type_user = TypeUser::all();
+
+        //die dump
+        dd($type_user);
+
+        return view('pages.backsite.management-access.type-user.index', compact('type_user'));
     }
 
     /**

@@ -13,6 +13,8 @@
     </head>
     <body>
 
+        @include('sweetalet::alert');
+
         @yield('content')
 
         @stack('before-script')

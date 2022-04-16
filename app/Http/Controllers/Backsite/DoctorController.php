@@ -66,7 +66,7 @@ class DoctorController extends Controller
          $data = $request->all();
 
          //store to database
-         $specialist = Doctor::create($data);
+         $doctor = Doctor::create($data);
  
          alert()->success('Success Message', 'Successfully added new doctor');
          return redirect()->route('backsite.doctor.index');
@@ -105,7 +105,11 @@ class DoctorController extends Controller
      */
     public function update(UpdateDoctorRequest $request, Doctor $doctor)
     {
+       
+       // get all request from frontsite
        $data = $request($data);
+
+       // update to database
        $doctor->update($data);
 
        alert()->success('Success Message', 'Successfully Updated data');

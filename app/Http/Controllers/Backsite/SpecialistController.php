@@ -110,10 +110,13 @@ class SpecialistController extends Controller
      */
     public function update(UpdateSpecialistRequest $request, Specialist $specialist)
     {
+       // get all request from frontsite 
        $data = $request($data);
+
+       //update to database
        $specialist->update($data);
 
-       alert()->success('Success Message', 'Successfully Updated data');
+       alert()->success('Success Message', 'Successfully Updated specialist');
        return redirect()->route('backsite.specialist.index');
     }
 

@@ -12,7 +12,7 @@
 
     </head>
     <body>
-            @include('sweetalet::alert');
+            @include('sweetalert::alert');
 
             @include('components.frontsite.header')
                 <!-- Fungsi Yield adalah untuk memasukkan fungsi HTML -->

@@ -21,7 +21,6 @@ use App\Http\Controllers\Backsite\DoctorController;
 use App\Http\Controllers\Backsite\ReportAppointmentController;
 use App\Http\Controllers\Backsite\ReportTransactionController;
 use App\Http\Controllers\Backsite\TransactionController;
-use App\Http\Controllers\Backsite\ReportController;
 
 
 /*
@@ -83,9 +82,6 @@ Route::group(['prefix' => 'backsite', 'as' => 'backsite.', 'middleware' => ['aut
 
     // report transaction
     Route::resource('transaction', ReportTransactionController::class);
-
-    //report
-    Route::resource('report', ReportController::class);
 
     //success pages
     Route::resource('successregister', SuccessRegisterController::class);

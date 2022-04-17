@@ -13,7 +13,7 @@
     </head>
     <body>
 
-        @include('sweetalet::alert');
+        @include('sweetalert::alert');
 
         @yield('content')
 

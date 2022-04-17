@@ -107,12 +107,12 @@ class DoctorController extends Controller
     {
        
        // get all request from frontsite
-       $data = $request($data);
+       $data = $request->all();
 
        // update to database
        $doctor->update($data);
 
-       alert()->success('Success Message', 'Successfully Updated data');
+       alert()->success('Success Message', 'Successfully Updated data doctor');
        return redirect()->route('backsite.doctor.index');
     }
 

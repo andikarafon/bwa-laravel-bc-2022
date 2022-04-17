@@ -4,9 +4,16 @@ namespace App\Http\Requests\Role;
 
 use App\Models\ManagementAccess\Role;
 
+
+
 //use gate
 use Illuminate\Foundation\Http\FormRequest;
 use Symfony\Component\HttpFoundation\Response;
+
+//request
+use App\Http\Requests\Role\StoreRoleRequest;
+use App\Http\Requests\Role\UpdateRoleRequest;
+
 
 class StoreRoleRequest extends FormRequest
 {

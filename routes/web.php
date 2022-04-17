@@ -18,7 +18,8 @@ use App\Http\Controllers\Backsite\ConsultationController;
 use App\Http\Controllers\Backsite\SpecialistController;
 use App\Http\Controllers\Backsite\ConfigPaymentController;
 use App\Http\Controllers\Backsite\DoctorController;
-use App\Http\Controllers\Backsite\AppointmentBacksiteController;
+use App\Http\Controllers\Backsite\ReportAppointmentController;
+use App\Http\Controllers\Backsite\ReportTransactionController;
 use App\Http\Controllers\Backsite\TransactionController;
 use App\Http\Controllers\Backsite\ReportController;
 
@@ -77,11 +78,11 @@ Route::group(['prefix' => 'backsite', 'as' => 'backsite.', 'middleware' => ['aut
     //doctor
     Route::resource('doctor', DoctorController::class);
 
-    //appointment-backsite-controller
-    Route::resource('appointment-backsite', AppointmentBacksiteController::class);
+    // report appointment
+    Route::resource('appointment', ReportAppointmentController::class);
 
-    //transaction
-    Route::resource('transaction', TransactionController::class);
+    // report transaction
+    Route::resource('transaction', ReportTransactionController::class);
 
     //report
     Route::resource('report', ReportController::class);

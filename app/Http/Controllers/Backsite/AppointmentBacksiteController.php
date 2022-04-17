@@ -31,7 +31,9 @@ class AppointmentBacksiteController extends Controller
 
     public function index()
     {
-        return view('pages.backsite.operational.appointment.index');
+        $appointment = Appointment::orderBy('created_at', 'desc')->get();
+
+        return view('pages.backsite.operational.appointment.index', compact('appointment'));
     }
 
     /**

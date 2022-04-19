@@ -38,6 +38,7 @@ class ReportTransactionController extends Controller
 
     public function index()
     {
+        //pakai whereHas untuk menampilkan data sesuai kondisi
         $transaction = Transaction::orderBy('created_at', 'desc')->get();
 
         return view('pages.backsite.operational.transaction.index', compact('transaction'));

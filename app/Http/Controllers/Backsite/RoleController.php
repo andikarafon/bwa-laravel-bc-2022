@@ -80,7 +80,8 @@ class RoleController extends Controller
      */
     public function show(Role $role)
     {
-        //----
+        //-- Fungsi Load adalah untuk meng-get permission yang memiliki role tersebut. Jadi jika di show
+        // maka akan ketahuan permissionnya apa saja
         $role->load('permission');
 
         return view('pages.backsite.management-access.role.show', compact('role'));
@@ -95,6 +96,7 @@ class RoleController extends Controller
     public function edit(Role $role)
     {
         $permission = Permission::all();
+
         $role->load('permission');
 
         return view('pages.backsite.management-access.role.edit', compact('permission', 'role'));
@@ -111,6 +113,9 @@ class RoleController extends Controller
     {
         $role->update($request->all());
 
+        //memasukkan permission baru yang belump pernah adalah
+        //disinkron dari hasil request yang nama inputannya permission
+        //bentuknya array yang sumbernya nanti dari select2
         $role->permission()->sync($request->input('permission', []));
 
         alert()->success('Success Message', 'Successfully updated role');
@@ -123,7 +128,7 @@ class RoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Role $role)
     {
         $role->forceDelete();
 

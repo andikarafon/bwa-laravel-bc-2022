@@ -12,7 +12,7 @@ class Appointment extends Model
 
    use SoftDeletes;
 
-   public $table = 'appointment'; //declrae tabel
+   public $table = 'appointment'; //declare tabel
 
    //this field must type date yyyy-mm-dd hh:mm:ss
    protected $dates = [ 

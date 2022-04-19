@@ -14,17 +14,28 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Authenticatable
 {
     use HasApiTokens;
-    use HasFactory;
+    // use HasFactory;
     use HasProfilePhoto;
     use HasTeams;
     use Notifiable;
     use TwoFactorAuthenticatable;
+
+    use SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
      *
      * @var string[]
      */
+
+    protected $dates = [
+        'updated_at',
+        'created_at',
+        'deleted_at',
+        'email_verified_at',
+    ];
+
+
     protected $fillable = [
         'name', 'email', 'password',
     ];
@@ -58,4 +69,25 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    // one to many
+    public function appointment()
+    {
+        // 2 parameter (path model, field foreign key)
+        return $this->hasMany('App\Models\Operational\Appointment', 'user_id');
+    }
+
+    public function detail_user()
+    {
+        // 2 parameter (path model, field foreign key)
+        return $this->hasOne('App\Models\ManagementAccess\DetailUser', 'user_id');
+    }
+
+    public function role_user()
+    {
+        // 2 parameter (path model, field foreign key)
+        return $this->hasMany('App\Models\ManagementAccess\RoleUser', 'user_id');
+    }
+
+    
 }

@@ -19,6 +19,11 @@ use App\Http\Requests\User\UpdateUserRequest;
 use Auth;
 
 use App\Models\User;
+use App\Models\ManagementAccess\DetailUser;
+use App\Models\ManagementAccess\Permission;
+use App\Models\ManagementAccess\Role;
+use App\Models\MasterData\TypeUser;
+
 
 class UserController extends Controller
 {
@@ -147,7 +152,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
         $user->forceDelete();
 

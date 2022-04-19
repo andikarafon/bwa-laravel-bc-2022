@@ -40,9 +40,7 @@ class UpdateUserRequest extends FormRequest
             'email' => [
                 'required', 'email', 'max:255',  Rule::unique('users')->ignore($this->user), //rule works only for other record id
             ],
-            'password' => [
-                'min:8', 'string', 'max:255', 'mixedcase',
-            ],
+            //add validation for role this here
         ];
     }
 }

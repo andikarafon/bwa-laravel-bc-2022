@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 // use library here
 use Illuminate\Support\Facades\Storage;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Database\Eloquent\Builder;
 
 // use everything here
 // use Gate;
@@ -21,6 +22,8 @@ use App\Models\Operational\Doctor;
 use App\Models\MasterData\Specialist;
 use App\Models\MasterData\Consultation;
 use App\Models\MasterData\ConfigPayment;
+
+
 
 
 
@@ -44,8 +47,9 @@ class HospitalPatientController extends Controller
          $hospital_patient = User::whereHas('detail_user', function (Builder $query) {
                              $query->where('type_user_id', 3); // only load user type patient or id 3 in type user table
                              })->orderBy('created_at', 'desc')
-                             ->get();
-
+                            ->get();
+                        
+                            
         return view('pages.backsite.operational.hospital-patient.index', compact('hospital_patient'));
 
     }

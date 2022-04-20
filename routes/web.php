@@ -18,6 +18,7 @@ use App\Http\Controllers\Backsite\ConsultationController;
 use App\Http\Controllers\Backsite\SpecialistController;
 use App\Http\Controllers\Backsite\ConfigPaymentController;
 use App\Http\Controllers\Backsite\DoctorController;
+use App\Http\Controllers\Backsite\HospitalPatientController;
 use App\Http\Controllers\Backsite\ReportAppointmentController;
 use App\Http\Controllers\Backsite\ReportTransactionController;
 use App\Http\Controllers\Backsite\TransactionController;
@@ -63,7 +64,7 @@ Route::group(['prefix' => 'backsite', 'as' => 'backsite.', 'middleware' => ['aut
     Route::resource('user', UserController::class);
 
     //usertype
-    Route::resource('usertype', UserTypeController::class);
+    Route::resource('type_user', UserTypeController::class);
 
     //consultation
     Route::resource('consultation', ConsultationController::class);
@@ -72,10 +73,13 @@ Route::group(['prefix' => 'backsite', 'as' => 'backsite.', 'middleware' => ['aut
     Route::resource('specialist', SpecialistController::class);
 
     //config-payment
-    Route::resource('config-payment', ConfigPaymentController::class);
+    Route::resource('config_payment', ConfigPaymentController::class);
 
     //doctor
     Route::resource('doctor', DoctorController::class);
+
+    // hospital patient
+    Route::resource('hospital_patient', HospitalPatientController::class);
 
     // report appointment
     Route::resource('appointment', ReportAppointmentController::class);
@@ -89,10 +93,4 @@ Route::group(['prefix' => 'backsite', 'as' => 'backsite.', 'middleware' => ['aut
 
 });
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
-// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-//     return view('dashboard');
-// })->name('dashboard');

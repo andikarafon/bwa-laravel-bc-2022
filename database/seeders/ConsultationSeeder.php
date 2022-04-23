@@ -16,25 +16,26 @@ class ConsultationSeeder extends Seeder
      */
     public function run()
     {
-         //create data seeder   
+        // create data here
         $consultation = [
             [
                 'name' => 'Jantung Sesak',
-                'created_at' => '2022-03-26 00:00:00',
-                'updated_at' => '2022-03-26 00:00:00',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
                 'name' => 'Tekanan Darah Tinggi',
-                'created_at' => '2022-03-26 00:00:00',
-                'updated_at' => '2022-03-26 00:00:00',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
                 'name' => 'Gangguan Irama Jantung',
-                'created_at' => '2022-03-26 00:00:00',
-                'updated_at' => '2022-03-26 00:00:00',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
             ],
-    ];
+        ];
 
-    Consultation::insert($consultation);
+        // this array $consultation will be insert to table 'consultation'
+        Consultation::insert($consultation);
     }
 }

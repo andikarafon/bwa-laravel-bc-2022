@@ -15,26 +15,27 @@ class TypeUserSeeder extends Seeder
      * @return void
      */
     public function run()
-            {
-                        $type_user = [
-                            [
-                                'name' => 'Admin',
-                                'created_at' => '2022-03-26 00:00:00',
-                                'updated_at' => '2022-03-26 00:00:00',
-                            ],
-                            [
-                                'name' => 'Dokter',
-                                'created_at' => '2022-03-26 00:00:00',
-                                'updated_at' => '2022-03-26 00:00:00',
-                            ],
-                            [
-                                'name' => 'Pasien',
-                                'created_at' => '2022-03-26 00:00:00',
-                                'updated_at' => '2022-03-26 00:00:00',
-                            ],
-                        ];
+    {
+        // create data here
+        $type_user = [
+            [
+                'name' => 'Admin',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
+            ],
+            [
+                'name' => 'Dokter',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
+            ],
+            [
+                'name' => 'Pasien',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
+            ],
+        ];
 
-                    TypeUser::insert($type_user);
-            }
+        // this array $type_user will be insert to table 'type_user'
+        TypeUser::insert($type_user);
+    }
 }
-

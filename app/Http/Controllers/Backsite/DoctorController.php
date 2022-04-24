@@ -66,7 +66,7 @@ class DoctorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(RequStoreDoctorRequestest $request)
+    public function store(StoreDoctorRequest $request)
     {
          //get all request from frontsite
          $data = $request->all();

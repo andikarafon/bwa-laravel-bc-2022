@@ -11,12 +11,8 @@
             <li class=" navigation-header"><span data-i18n="Application">Application</span><i class="la la-ellipsis-h" data-toggle="tooltip" data-placement="right" data-original-title="Application"></i>
             </li>
 
-           
-            {{-- @can('management_access') ==> ini diambil dari AuthGates.php, Middleware, dimana Middeleware nya disimpan di Session --}}
-            {{-- management_access itu diambil dari permissions->title  --}}
-
-             {{-- @can('management_access') --}}
-                <li class=" nav-item"><a href="#"><i class="{{ request()->is('backsite/permission') || request()->is('backsite/permission/*') || request()->is('backsite/*/permission') || request()->is('backsite/*/permission/*') || request()->is('backsite/role') || request()->is('backsite/role/*') || request()->is('backsite/*/role') || request()->is('backsite/*/role/*') || request()->is('backsite/user') || request()->is('backsite/user/*') || request()->is('backsite/*/user') || request()->is('backsite/*/user/*') ? 'bx bx-group bx-flashing' : 'bx bx-group' }}"></i><span class="menu-title" data-i18n="Management Access">Management Access</span></a>
+            {{-- @can('management_access') --}}
+                <li class=" nav-item"><a href="#"><i class="{{ request()->is('backsite/permission') || request()->is('backsite/permission/*') || request()->is('backsite/*/permission') || request()->is('backsite/*/permission/*') || request()->is('backsite/role') || request()->is('backsite/role/*') || request()->is('backsite/*/role') || request()->is('backsite/*/role/*') || request()->is('backsite/user') || request()->is('backsite/user/*') || request()->is('backsite/*/user') || request()->is('backsite/*/user/*') || request()->is('backsite/type_user') || request()->is('backsite/type_user/*') || request()->is('backsite/*/type_user') || request()->is('backsite/*/type_user/*') ? 'bx bx-group bx-flashing' : 'bx bx-group' }}"></i><span class="menu-title" data-i18n="Management Access">Management Access</span></a>
                     <ul class="menu-content">
                         {{-- @can('permission_access') --}}
                             <li class="{{ request()->is('backsite/permission') || request()->is('backsite/permission/*') || request()->is('backsite/*/permission') || request()->is('backsite/*/permission/*') ? 'active' : '' }} ">
@@ -104,10 +100,6 @@
 
 
                         {{-- here you can add nurse --}}
-                        {{-- Buatkan menu buat Perawat, lalu dibuat controllernya dan dibuatkan routenya. sifatnya sama dengan hospital Patient --}}
-                        {{-- Tambahkan di seeedernya untuk nambah data, dimana data 4 adalah untuk Perawat --}}
-                        {{-- Jadi tidak perlu dibuat modelnya karena hanya menampilkan data --}}
-
 
 
                         {{-- @can('appointment_access') --}}

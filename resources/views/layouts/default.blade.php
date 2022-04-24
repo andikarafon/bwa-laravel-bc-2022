@@ -2,31 +2,30 @@
 <html lang="en">
     <head>
 
-            @include('includes.frontsite.meta')
+        @include('includes.frontsite.meta')
 
-            <title>@yield('title') | MeetDoctor</title>
+        <title>@yield('title') | MeetDoctor</title>
 
-            @stack('before-style')
-                @include('includes.frontsite.style')
-            @stack('after-style')
+        @stack('before-style')
+            @include('includes.frontsite.style')
+        @stack('after-style')
 
     </head>
     <body>
-            @include('sweetalert::alert');
 
-            @include('components.frontsite.header')
-                <!-- Fungsi Yield adalah untuk memasukkan fungsi HTML -->
-                @yield('content')
-            @include('components.frontsite.footer')
+        @include('sweetalert::alert')
 
+        @include('components.frontsite.header')
+            @yield('content')
 
-            {{-- stack adalah untuk meng-import script yang hanya jalan di pages tertentu saja --}}
-            @stack('before-script')
-                @include('includes.frontsite.script')
-            @stack('after-script')
+        @include('components.frontsite.footer')
 
-            {{--  modals --}}
-            
+        @stack('before-script')
+            @include('includes.frontsite.script')
+        @stack('after-script')
+
+        {{-- modals --}}
+        {{-- if you have a modal, create here --}}
 
     </body>
 </html>

@@ -7,11 +7,10 @@ use App\Http\Controllers\Controller;
 //use library
 use Illuminate\Support\Facades\storage;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\DB;
 
 //user everything here
-//use case
-//Jika tidak perlu Login, maka tidak perlu di use dan dideklarasi di Construct
-// use Auth;
+use Auth;
 
 //model here
 use App\Models\User;
@@ -34,7 +33,12 @@ class LandingController extends Controller
 
     public function index()
     {
-        return view('pages.frontsite.landing-page.index');
+        
+        $specialist = Specialist::orderBy('name', 'desc')->limit(5)->get();
+        $doctor = Doctor::orderBy('created_at', 'desc')->limit(4)->get();
+
+        return view('pages.frontsite.landing-page.index', compact('doctor', 'specialist'));
+
     }
 
     /**
@@ -89,7 +93,7 @@ class LandingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return abort(404);
     }
 
     /**

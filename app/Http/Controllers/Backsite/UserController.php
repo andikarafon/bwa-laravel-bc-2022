@@ -143,10 +143,13 @@ class UserController extends Controller
         // update roles
         $user->role()->sync($request->input('role', []));
 
+
         // save to detail user , to set type user
-        $detail_user = DetailUser::find($user['id']);
+        $detail_user = DetailUser::where('user_id', $user['id'])->first();
+        //$detail_user = DetailUser::find($user['id']);
         $detail_user->type_user_id = $request['type_user_id'];
         $detail_user->save();
+        
 
         alert()->success('Success Message', 'Successfully updated user');
         return redirect()->route('backsite.user.index');

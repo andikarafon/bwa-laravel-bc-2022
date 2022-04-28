@@ -121,7 +121,7 @@ class SpecialistController extends Controller
     public function update(UpdateSpecialistRequest $request, Specialist $specialist)
     {
        // get all request from frontsite 
-       $data = $request($data);
+       $data = $request->all();
 
        $data['price'] = str_replace(',', '', $data['price']);
        $data['price'] = str_replace('IDR ', '', $data['price']);

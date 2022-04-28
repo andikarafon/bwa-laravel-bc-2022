@@ -12,7 +12,7 @@ class DetailUser extends Model
 
     use SoftDeletes;
 
-    public $table = 'detail_user'; //declrae tabel
+    public $table = 'detail_user'; //declare tabel
 
     //this field must type date yyyy-mm-dd hh:mm:ss
     protected $dates = [ 

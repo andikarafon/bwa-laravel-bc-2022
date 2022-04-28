@@ -141,7 +141,7 @@ class UserController extends Controller
         $user->update($data);
 
         // update roles
-        $user->role()->sync($request_user->input('role', []));
+        $user->role()->sync($request->input('role', []));
 
         // save to detail user , to set type user
         $detail_user = DetailUser::find($user['id']);
